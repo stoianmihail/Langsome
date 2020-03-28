@@ -37,8 +37,8 @@ class GUI:
    
   # The actual translation
   def translate(self, even = None):
-    fromLanguage = self.language.get()
-    best = self.translator.query(fromLanguage, self.input.get())
+    targetLanguage = self.language.get()
+    best = self.translator.query(targetLanguage, self.input.get())
     self.output.delete('1.0', END)
     if not best:
       self._formatHyperLink("No matching medicine in our database.\nPlease check the target language or the spelling.\n")
@@ -50,7 +50,7 @@ class GUI:
         pattern = "Result"
       else:
         pattern = "Results"
-      urlPattern = "https://www.drugbank.ca/drugs/" if fromLanguage == "German" else "https://www.gelbe-liste.de/produkte/"
+      urlPattern = "https://www.drugbank.ca/drugs/" if targetLanguage == "English" else "https://www.gelbe-liste.de/produkte/"
       size = len(commonNames)
       self.output.insert(END, str(size) + " " + pattern + "\n" + ("-" * (1 + len(str(size)) + len(pattern))) + "\n")
       for index, elem in enumerate(commonNames):
