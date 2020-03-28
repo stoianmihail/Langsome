@@ -10,7 +10,7 @@ We present *Langsome*, the Interlingual Medicine Translator. It has been develop
 ```bash
 1) git clone https://github.com/stoianmihail/Langsome.git
 2) cd Langsome
-3) python setup.py
+3) python3 setup.py
 ```
 
 ## Usage
