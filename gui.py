@@ -81,7 +81,7 @@ class GUI:
     else:
       print("Operating System not supported")
       sys.exit(1)
-    self.root.title("LangMed: Interlingual Medicine Translator")
+    self.root.title("Langsome: Interlingual Medicine Translator")
 
     # Set color
     mainFrame = Frame(self.root, bg='bisque')
