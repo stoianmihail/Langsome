@@ -130,7 +130,7 @@ class GUI:
     textScroll.config(command=self.output.yview)
 
     # Add the icon
-    img = ImageTk.PhotoImage(Image.open("util/langsome_icon.png").resize((150, 150)))
+    img = ImageTk.PhotoImage(Image.open("util/small_icon.png").resize((150, 150)))
     panel = Label(mainFrame, image=img)
     panel.grid(row=4, column=0, columnspan=4, padx=30, pady=5, sticky="ns")
 
